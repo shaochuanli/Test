@@ -1,4 +1,4 @@
-package com.chuan.test;
+package com.chuan.sort;
 
 import java.util.Arrays;
 
