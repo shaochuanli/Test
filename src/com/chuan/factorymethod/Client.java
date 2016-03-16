@@ -1,4 +1,4 @@
-package com.chuan.factory;
+package com.chuan.factorymethod;
 
 public class Client {
 	
