@@ -19,6 +19,7 @@ public class KuaiSu {
 					int temp = array[low];
 					array[low] = array[high];
 					array[high] = temp;
+					flag = false;
 				}
 			} else {
 				if (array[low] <= array[high]) {
@@ -27,6 +28,7 @@ public class KuaiSu {
 					int temp = array[low];
 					array[low] = array[high];
 					array[high] = temp;
+					flag = true;
 				}
 			}
 		}
