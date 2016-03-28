@@ -33,7 +33,6 @@ public class ReetrantLockTest {
 		 * 当一条线程不释放锁的时候，第二个线程走到这里的时候就阻塞掉了
 		 */
 		try {
-			lock.tryLock();
 			lock.lock();
 			System.out.println(Thread.currentThread().getName() + " locking ...");
 			System.out.println("Hello world!");

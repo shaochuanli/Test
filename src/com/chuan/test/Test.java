@@ -1,32 +1,27 @@
 package com.chuan.test;
 
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.Vector;
 
+public class Test {
 
-public class Test extends Thread{
-	
-	ConcurrentHashMap c = new ConcurrentHashMap();
-	private int threadNo;
-	private String lock;
+	public static void main(String[] args) {
+		int[] array = {};
+		Object o = new Object();
+		ArrayList[] arrayList = new ArrayList[8];
+		Vector<String> vector = new Vector<String>();
+		List<String> list = new ArrayList<String>();
+		String str = new String("str");
+		HashMap<String, String> hashMap = new HashMap<String, String>();
+		Hashtable<String, String> hashTable = new Hashtable<String, String>();
+		TreeMap<String, Object> treeMap = new TreeMap<String, Object>();
 
-	public Test(int threadNo, String lock) {
-		this.threadNo = threadNo;
-		this.lock = lock;
-	}
-
-	public static void main(String[] args) throws Exception {
-		for (int i = 1; i < 10; i++) {
-			new Test(i, "lock").start();
-			Thread.sleep(1);
-		}
-	}
-
-	@Override
-	public void run() {
-		//synchronized (lock) {
-			for (int i = 1; i < 10000; i++) {
-				System.out.println("No." + threadNo + ":" + i);
-			}
-		//}
+		Map<String, String> map = Collections.<String, String> synchronizedMap(hashMap);
 	}
 }

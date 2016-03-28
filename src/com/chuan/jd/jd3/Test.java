@@ -1,13 +1,16 @@
 package com.chuan.jd.jd3;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 public class Test {
-	public static Integer NUM = 1;
-	public static Integer executor = 1;
-	public static Object sychoner = new Object();
+	public static int num = 1;
+	public static Integer status = 1;
 
 	public static void main(String[] args) {
-		new Thread3().start();
-		new Thread2().start();
-		new Thread1().start();
+		ExecutorService executor = Executors.newFixedThreadPool(2);
+		executor.submit(new Task1());
+		executor.submit(new Task2());
+		executor.shutdown();
 	}
 }
