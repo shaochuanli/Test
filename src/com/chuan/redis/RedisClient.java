@@ -34,8 +34,8 @@ public class RedisClient {
 		// 池基本配置
 		JedisPoolConfig config = new JedisPoolConfig();
 		config.setMaxIdle(5);
-		config.setMaxTotal(20);
-		config.setMaxWaitMillis(1000l);
+		config.setMaxActive(20);
+		config.setMaxWait(1000l);
 		config.setTestOnBorrow(false);
 
 		jedisPool = new JedisPool(config, "127.0.0.1", 6379);
@@ -48,8 +48,8 @@ public class RedisClient {
 		// 池基本配置
 		JedisPoolConfig config = new JedisPoolConfig();
 		config.setMaxIdle(5);
-		config.setMaxTotal(20);
-		config.setMaxWaitMillis(1000l);
+		config.setMaxActive(20);
+		config.setMaxWait(1000l);
 		config.setTestOnBorrow(false);
 
 		// slave链接
