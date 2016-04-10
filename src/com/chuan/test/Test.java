@@ -4,6 +4,6 @@ package com.chuan.test;
 public class Test {
 
 	public static void main(String[] args) {
-		System.out.println("AB12");
+		System.out.println("B");
 	}
 }
