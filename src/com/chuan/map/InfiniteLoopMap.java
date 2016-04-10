@@ -2,6 +2,11 @@ package com.chuan.map;
 
 import java.util.HashMap;
 
+/**
+ * hashmap 死链，CPU飙至100%
+ * @author chuan
+ *
+ */
 public class InfiniteLoopMap {
 	private HashMap map = new HashMap();
 
